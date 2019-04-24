@@ -6,7 +6,7 @@ RSpec.describe IAPValidator::IAPValidator do
     expected_response = { 'cool' => 123 }
     expected_response_str = MultiJson.dump(expected_response)
 
-    stub = stub_request(:post, IAPValidator::IAPValidator::SANDBOX_URL + '/verifyReceipt')
+    stub = stub_request(:post, IAPValidator::IAPValidator::SANDBOX_URL)
            .with(body: { 'receipt-data' => receipt_data })
            .and_return(status: 200, body: expected_response_str)
 
@@ -21,7 +21,7 @@ RSpec.describe IAPValidator::IAPValidator do
     expected_response = { 'cool' => 123 }
     expected_response_str = MultiJson.dump(expected_response)
 
-    stub = stub_request(:post, IAPValidator::IAPValidator::SANDBOX_URL + '/verifyReceipt')
+    stub = stub_request(:post, IAPValidator::IAPValidator::SANDBOX_URL)
            .with(body: { 'receipt-data' => receipt_data })
            .and_return(status: 400, body: expected_response_str)
 
