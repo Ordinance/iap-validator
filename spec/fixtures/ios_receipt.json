@@ -1,0 +1,53 @@
+{
+  "receipt": {
+    "receipt_type": "Production",
+    "adam_id": 1502447854,
+    "app_item_id": 1502447854,
+    "bundle_id": "com.loop.match3d",
+    "application_version": "1054",
+    "download_id": 26076671692908,
+    "version_external_identifier": 842840447,
+    "receipt_creation_date": "2021-07-02 20:51:05 Etc/GMT",
+    "receipt_creation_date_ms": "1625259065000",
+    "receipt_creation_date_pst": "2021-07-02 13:51:05 America/Los_Angeles",
+    "request_date": "2021-07-02 20:51:48 Etc/GMT",
+    "request_date_ms": "1625259108884",
+    "request_date_pst": "2021-07-02 13:51:48 America/Los_Angeles",
+    "original_purchase_date": "2020-09-14 17:48:39 Etc/GMT",
+    "original_purchase_date_ms": "1600105719000",
+    "original_purchase_date_pst": "2020-09-14 10:48:39 America/Los_Angeles",
+    "original_application_version": "338",
+    "in_app": [
+      {
+        "quantity": "1",
+        "product_id": "match3d.piggybank",
+        "transaction_id": "60000942062982",
+        "original_transaction_id": "60000942062982",
+        "purchase_date": "2021-07-02 20:51:05 Etc/GMT",
+        "purchase_date_ms": "1625259065000",
+        "purchase_date_pst": "2021-07-02 13:51:05 America/Los_Angeles",
+        "original_purchase_date": "2021-07-02 20:51:05 Etc/GMT",
+        "original_purchase_date_ms": "1625259065000",
+        "original_purchase_date_pst": "2021-07-02 13:51:05 America/Los_Angeles",
+        "is_trial_period": "false",
+        "in_app_ownership_type": "PURCHASED"
+      },
+      {
+        "quantity": "1",
+        "product_id": "match3d.removeadsoffer.nonconsumable",
+        "transaction_id": "60000768549682",
+        "original_transaction_id": "60000768549682",
+        "purchase_date": "2020-09-20 20:18:26 Etc/GMT",
+        "purchase_date_ms": "1600633106000",
+        "purchase_date_pst": "2020-09-20 13:18:26 America/Los_Angeles",
+        "original_purchase_date": "2020-09-20 20:18:26 Etc/GMT",
+        "original_purchase_date_ms": "1600633106000",
+        "original_purchase_date_pst": "2020-09-20 13:18:26 America/Los_Angeles",
+        "is_trial_period": "false",
+        "in_app_ownership_type": "PURCHASED"
+      }
+    ]
+  },
+  "environment": "Production",
+  "status": 0
+}

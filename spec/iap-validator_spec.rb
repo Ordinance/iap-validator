@@ -1,33 +1,16 @@
 require 'helper'
+require 'multi_json'
 
-RSpec.describe IAPValidator::IAPValidator do
-  it 'should validate' do
-    receipt_data = 'randomreceiptdata'
-    expected_response = { 'cool' => 123 }
-    expected_response_str = MultiJson.dump(expected_response)
-
-    stub = stub_request(:post, IAPValidator::IAPValidator::SANDBOX_URL)
+RSpec.describe IAPValidator::Receipt do
+  it 'should validate and return receipt object' do
+    receipt_data     = File.read('./spec/fixtures/ios_receipt.txt')
+    receipt_response = File.read('./spec/fixtures/ios_receipt.json')
+    stub = stub_request(:post, IAPValidator::Client::PRODUCTION_URL)
            .with(body: { 'receipt-data' => receipt_data })
-           .and_return(status: 200, body: expected_response_str)
+           .and_return(status: 200, body: receipt_response)
 
-    resp = IAPValidator::IAPValidator.validate(receipt_data, true)
-
-    expect(stub).to have_been_requested
-    expect(resp).to eq(expected_response)
-  end
-
-  it 'should validate with error' do
-    receipt_data = 'randomreceiptdata'
-    expected_response = { 'cool' => 123 }
-    expected_response_str = MultiJson.dump(expected_response)
-
-    stub = stub_request(:post, IAPValidator::IAPValidator::SANDBOX_URL)
-           .with(body: { 'receipt-data' => receipt_data })
-           .and_return(status: 400, body: expected_response_str)
-
-    resp = IAPValidator::IAPValidator.validate(receipt_data, true)
-
-    expect(stub).to have_been_requested
-    expect(resp).to be_nil
+    receipt = IAPValidator::Receipt.verify(receipt_data)
+    expect(receipt.status).to eq(0)
   end
 end
+
