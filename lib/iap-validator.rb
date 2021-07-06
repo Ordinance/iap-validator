@@ -5,4 +5,5 @@ module IAPValidator;end;
 require "iap-validator/client"
 require "iap-validator/iap-validator"
 require "iap-validator/receipt"
+require "iap-validator/receipt_info"
 require "iap-validator/version"
